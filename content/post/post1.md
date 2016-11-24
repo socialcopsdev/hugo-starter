@@ -1,15 +1,15 @@
 +++
-title = "homepage"
-draft = true
+title = "Post 1"
+draft = false
 date = "2016-11-24T22:16:10+05:30"
 
 +++
 
 # Hello World
 
-This is the homepage.
+This is the first post.  This is created using Github-flavored markdown syntax.
 
-# CSS is for L00$rs
+# Pffff who needs CSS
 
 **I'm bold!**
 

@@ -1,3 +1,14 @@
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 title = "Hello World Starter Project"
 languageCode = "en-us"
+[[menu.main]]
+    name = "Product Page 1"
+    pre = "<i class='fa fa-heart'></i>"
+    weight = -110
+    identifier = "Product Page 1"
+    url = "/page/sampleproduct1"
+[[menu.main]]
+    name = "Product Page 2"
+    pre = "<i class='fa fa-road'></i>"
+    weight = -100
+    url = "/page/sampleproduct2"
