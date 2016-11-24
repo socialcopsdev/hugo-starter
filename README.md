@@ -13,7 +13,7 @@ This is a small project to show the capabilities and structure of a static websi
  1.  Install Hugo using these  [these instructions](https://gohugo.io/overview/installing/).
  2.  Run `npm install` or `yarn` to get the dependencies for the included Gulp build system.
  3. Start the Gulp build-system and file-watching with `gulp`
- 4. Run `hugo server` to build the site and visit [localhost:1313](http://localhost:1313/) to view the unstyled template starter site.
+ 4. Run `hugo server` to build the site and visit [localhost:1313/hugo-starter/](http://localhost:1313/hugo-starter/) to view the unstyled template starter site.
 
 ## Structure
 
