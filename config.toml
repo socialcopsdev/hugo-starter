@@ -1,0 +1,3 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+title = "Hello World Starter Project"
+languageCode = "en-us"
