@@ -1,0 +1,8 @@
+<nav>
+    <p>Imagine that this is a beautiful navbar. The menu items are configured in config.toml</p>
+    <ul>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
+</nav>
