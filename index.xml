@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hello World Starter Project</title>
+    <title>Hugo Starter Project</title>
     <link>https://socialcopsdev.github.io/hugo-starter/index.xml</link>
-    <description>Recent content on Hello World Starter Project</description>
+    <description>Recent content on Hugo Starter Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Nov 2016 22:19:41 +0530</lastBuildDate>

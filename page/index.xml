@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Page-rsses on Hello World Starter Project</title>
+    <title>Page-rsses on Hugo Starter Project</title>
     <link>https://socialcopsdev.github.io/hugo-starter/page/index.xml</link>
-    <description>Recent content in Page-rsses on Hello World Starter Project</description>
+    <description>Recent content in Page-rsses on Hugo Starter Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <atom:link href="https://socialcopsdev.github.io/hugo-starter/page/index.xml" rel="self" type="application/rss+xml" />
