@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hello World Starter Project</title>
+    <link>http://replace-this-with-your-hugo-site.com/index.xml</link>
+    <description>Recent content on Hello World Starter Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Nov 2016 22:19:41 +0530</lastBuildDate>
+    <atom:link href="http://replace-this-with-your-hugo-site.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Post 2</title>
+      <link>http://replace-this-with-your-hugo-site.com/post/post2/</link>
+      <pubDate>Thu, 24 Nov 2016 22:19:41 +0530</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/post/post2/</guid>
+      <description>
+
+&lt;h1 id=&#34;another-page-with-markdown&#34;&gt;Another page with markdown&lt;/h1&gt;
+
+&lt;p&gt;This is a hello world project.  There&amp;rsquo;s really not much to see here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Post 1</title>
+      <link>http://replace-this-with-your-hugo-site.com/post/post1/</link>
+      <pubDate>Thu, 24 Nov 2016 22:16:10 +0530</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/post/post1/</guid>
+      <description>
+
+&lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
+
+&lt;p&gt;This is the first post.  This is created using Github-flavored markdown syntax.&lt;/p&gt;
+
+&lt;h1 id=&#34;pffff-who-needs-css&#34;&gt;Pffff who needs CSS&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;I&amp;rsquo;m bold!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ever heard of this cool website?&lt;/em&gt;
+&lt;a href=&#34;https://www.google.com&#34;&gt;google&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;You like dividers bro?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I&amp;rsquo;m a blockquote&lt;/p&gt;
+
+&lt;p&gt;Me too&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;// Built in code highlighting!&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;me&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;patrick&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;me&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;pratik&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color: #a6e22e&#34;&gt;console&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;log&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;You are in India&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Sample Product 1</title>
+      <link>http://replace-this-with-your-hugo-site.com/page/sampleproduct1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/page/sampleproduct1/</guid>
+      <description>&lt;p&gt;Here is a content page, but using html. This is how we could build custom product pages.&lt;p&gt;
+&lt;p&gt;This content and metadata of this project page is stored within &#39;content/page/products.html&#39;&lt;/p&gt;
+&lt;p&gt;The layout/frame for this page is stored within &#39;layouts/page/products.html&#39;&lt;/p&gt;
+&lt;p&gt;We can use this same frame for all of the product pages&lt;/p&gt;
+
+&lt;h2&gt;Our Product is the best&lt;/h2&gt;
+&lt;p&gt;Imagine fancy html/css/javascript things here&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sample Product 2</title>
+      <link>http://replace-this-with-your-hugo-site.com/page/sampleproduct2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/page/sampleproduct2/</guid>
+      <description>&lt;p&gt;Here is another sample product page&lt;/p&gt;
+&lt;p&gt;See sample products 1 for more details&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
