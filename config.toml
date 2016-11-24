@@ -1,5 +1,5 @@
 baseurl = "https://socialcopsdev.github.io/hugo-starter/"
-title = "Hello World Starter Project"
+title = "Hugo Starter Project"
 languageCode = "en-us"
 canonifyurls = true
 
