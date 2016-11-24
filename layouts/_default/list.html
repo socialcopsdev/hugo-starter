@@ -6,7 +6,7 @@
    <h1 id="title">{{ .Title }}</h1>
         <ul id="list">
             {{ range .Data.Pages }}
-                {{ .Render "li"}}
+                {{ .Render "summary"}}
             {{ end }}
         </ul>
   </div>
