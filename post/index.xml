@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post-rsses on Hello World Starter Project</title>
-    <link>http://replace-this-with-your-hugo-site.com/post/index.xml</link>
+    <link>https://replace-this-with-your-hugo-site.com/post/index.xml</link>
     <description>Recent content in Post-rsses on Hello World Starter Project</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Nov 2016 22:19:41 +0530</lastBuildDate>
-    <atom:link href="http://replace-this-with-your-hugo-site.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://replace-this-with-your-hugo-site.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Post 2</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/post2/</link>
+      <link>https://replace-this-with-your-hugo-site.com/post/post2/</link>
       <pubDate>Thu, 24 Nov 2016 22:19:41 +0530</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/post2/</guid>
+      <guid>https://replace-this-with-your-hugo-site.com/post/post2/</guid>
       <description>
 
 &lt;h1 id=&#34;another-page-with-markdown&#34;&gt;Another page with markdown&lt;/h1&gt;
@@ -25,10 +25,10 @@
     
     <item>
       <title>Post 1</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/post1/</link>
+      <link>https://replace-this-with-your-hugo-site.com/post/post1/</link>
       <pubDate>Thu, 24 Nov 2016 22:16:10 +0530</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/post1/</guid>
+      <guid>https://replace-this-with-your-hugo-site.com/post/post1/</guid>
       <description>
 
 &lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
