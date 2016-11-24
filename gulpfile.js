@@ -7,44 +7,48 @@ const concat        = require('gulp-concat');
 const uglify        = require('gulp-uglify');
 const cleanCSS      = require('gulp-clean-css');
 
-const rootDir = 'static';
+const srcDir = 'src';
+const destDir = 'static';
 
 // SCSS pipeline with autoprefixer and cleancss
 gulp.task('scss', function() {
-    gulp.src('src/scss/*.scss')
+    gulp.src(srcDir + '/scss/*.scss')
         .pipe(sass())
         .pipe(autoprefixer({
             browsers : ['last 20 versions']
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(concat('style.css'))
-        .pipe(gulp.dest(rootDir + '/css'));
+        .pipe(gulp.dest(destDir + '/css'));
 });
 
 // JS pipeline with babel and uglify
 gulp.task('js', () => {
-    return gulp.src('src/js/*.js')
+    return gulp.src(srcDir + '/js/*.js')
         .pipe(babel({
             presets: ['es2015']
         }))
         .pipe(concat('scripts.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(rootDir + '/js'));
+        .pipe(gulp.dest(destDir + '/js'));
 });
 
 // Optimize Images
 gulp.task('images', () =>
-    gulp.src('src/images/**/*')
+    gulp.src(srcDir + '/images/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest(rootDir + '/images'))
+        .pipe(gulp.dest(destDir + '/images'))
 );
 
 
 // Watch asset folder for changes
 gulp.task('watch', ['scss','images','js'], function () {
-    gulp.watch('src/scss/*.scss', ['scss']);
-    gulp.watch('src/images/*', ['images']);
-    gulp.watch('src/js/*', ['js']);
+    gulp.watch(srcDir + '/scss/*.scss', ['scss']);
+    gulp.watch(srcDir + '/images/*', ['images']);
+    gulp.watch(srcDir + '/js/*', ['js']);
 });
 
-gulp.task('default', ['watch']);
+// Build assets
+gulp.task('build', ['scss','images','js']);
+
+gulp.task('default', ['build']);
