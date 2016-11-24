@@ -31,4 +31,6 @@ The core project configuration is stored within the config.toml file.  The data 
 
 ## Build System
 
-This starter project has a basic gulp build system configured.  This will allow us the write SCSS and ES6 javascript in the "/src" directory, and to automatically compile it to browser compatible code in the "static" directory.  It is also able to optimize images.  To use the build system just run `gulp` to build everything, to to watch the filesystem for changes.
+This starter project has a basic gulp build system configured.  This will allow us the write SCSS and ES6 Javascript in the "/src" directory, and to automatically compile it to browser compatible code in the "static" directory.  It is also able to optimize images.  To use the build system just run `gulp` to build everything, to to watch the filesystem for changes.  
+
+You can also just put files directly in the static directory, such as libraries and fonts.  These will be accessible from the page templates, and will not be overwritten by Gulp unless they have the path "/js/scripts.js" or "css/style.css". 
