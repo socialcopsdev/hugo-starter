@@ -9,18 +9,21 @@
 	
 
 	
-
-	
 	<meta name="generator" content="Hugo 0.17" />
 </head>
 <body>
+	
+	<link rel="stylesheet" href="https://socialcopsdev.github.io/hugo-starter/css/vendor/normalize.css">
+	<link rel="stylesheet" href="https://socialcopsdev.github.io/hugo-starter/css/vendor/skeleton.css">
 	<link rel="stylesheet" href="https://socialcopsdev.github.io/hugo-starter/css/style.css">
 
 	<header>
 		<p>This is the header</p>
-		<a href="https://socialcopsdev.github.io/hugo-starter/">Hugo Starter Project</a>
 	</header>
 <nav>
+    <a href="https://socialcopsdev.github.io/hugo-starter/">
+        <img src="https://socialcopsdev.github.io/hugo-starter/images/logo.png" alt="Hugo Starter Project">
+    </a>
     <p>Imagine that this is a beautiful navbar. The menu items are configured in config.toml</p>
     <ul>
         
@@ -35,13 +38,58 @@
 <h1>Page title: Sample Product 1</h1> 
 
 <h1>Page Content</h1>
+<div class="container product-page">
+
 <p>Here is a content page, but using html. This is how we could build custom product pages.<p>
 <p>This content and metadata of this project page is stored within 'content/page/products.html'</p>
 <p>The layout/frame for this page is stored within 'layouts/page/products.html'</p>
 <p>We can use this same frame for all of the product pages</p>
+<p>Imagine fancy html/css/javascript things here</p>
 
 <h2>Our Product is the best</h2>
-<p>Imagine fancy html/css/javascript things here</p>
+
+
+    
+
+
+
+<div class="product-image-row">
+
+    <p class="product-image-text flex-text-right">This is a left-bound image, generated with the &#34;productimage shortcode&#34;</p>
+    <img class="product-image-left"  src="https://socialcopsdev.github.io/hugo-starter/images/collect.png" alt="Collect">
+</div>
+
+
+
+    
+
+
+
+<div class="product-image-row">
+
+    <p class="product-image-text flex-text-left">This is a right-bound image, generated with the &#34;productimage shortcode&#34;</p>
+    <img class="product-image-right " src="https://socialcopsdev.github.io/hugo-starter/images/collect.png" alt="Collect">
+</div>
+
+
+
+    
+
+
+
+<div>
+
+    <img class="product-image-center" src="https://socialcopsdev.github.io/hugo-starter/images/collect.png" alt="Collect">
+    <p class="product-image-text ">This is a center-bound image, generated with the &#34;productimage shortcode&#34;</p>
+</div>
+
+
+</div>
+
+
+
+
+
 
 	<footer>
 		<p>Imagine a beautiful footer here</p>
