@@ -1,0 +1,22 @@
+{{ $position := .Get "position" }}
+
+
+{{ if eq $position "left" }}
+<div class="product-image-row product-image-row-left">
+<!-- Use this template for left image -->
+    <img class="product-image-left"  src="{{ .Get "src" }}" alt="{{ .Get "title" }}">
+    <p class="product-image-text flex-text-right">{{ .Get "content" }}</p>
+</div>
+{{ else if eq $position "right"  }}
+<div class="product-image-row product-image-row-right">
+<!-- Use this template for right image -->
+    <img class="product-image-right" src="{{ .Get "src" }}" alt="{{ .Get "title" }}">
+    <p class="product-image-text flex-text-left">{{ .Get "content" }}</p>
+</div>
+{{ else }}
+<div>
+<!-- Use this template for center image -->
+    <img class="product-image-center" src="{{ .Get "src" }}" alt="{{ .Get "title" }}">
+    <p class="product-image-text ">{{ .Get "content" }}</p>
+</div>
+{{ end }}

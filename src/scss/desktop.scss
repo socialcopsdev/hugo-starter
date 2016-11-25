@@ -1,7 +1,10 @@
 @import 'variables.scss';
 
-@media only screen and (min-width: $desktop-screen){
+/** 
+This file is for style rules that overide the global styles on large desktop screens 
+**/
 
+@media only screen and (min-width: $desktop-screen){
 
 
 
