@@ -5,13 +5,13 @@
 <div class="product-image-row product-image-row-left">
 <!-- Use this template for left image -->
     <img class="product-image-left"  src="{{ .Get "src" }}" alt="{{ .Get "title" }}">
-    <p class="product-image-text flex-text-right">{{ .Get "content" }}</p>
+    <p class="product-image-text product-image-text-right">{{ .Get "content" }}</p>
 </div>
 {{ else if eq $position "right"  }}
 <div class="product-image-row product-image-row-right">
 <!-- Use this template for right image -->
     <img class="product-image-right" src="{{ .Get "src" }}" alt="{{ .Get "title" }}">
-    <div class="product-image-text flex-text-left">
+    <div class="product-image-text product-image-text-left">
         <p class="product-image-text">{{ .Get "content" }}</p>
     </div>
 </div>

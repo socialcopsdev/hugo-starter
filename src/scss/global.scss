@@ -16,9 +16,18 @@ li {
     padding: 14px;
 }
 
+.section-header {
+    text-align: center;
+}
+
 .product-page {
     padding: 12px;
 }
+
+
+/**
+Product Image Row Styling
+**/
 
 .product-image-row {
     min-width: 100%;
@@ -41,12 +50,12 @@ li {
     text-align: center;
 }
 
-.flex-text-left {
+.product-image-text-left {
     width: 40vw;
     order: 1;
 }
 
-.flex-text-right {
+.product-image-text-right {
     width: 40vw;
     order: 2;
 }

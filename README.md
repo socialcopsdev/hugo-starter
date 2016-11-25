@@ -11,6 +11,9 @@ This is a small project to show the capabilities and structure of a website buil
 Hugo enables teams to quickly build and iterate upon complex static websites.  The resulting site is easy and cheap to host using an enterprise-grade service such as [AWS Cloudfront](https://aws.amazon.com/cloudfront/), and very fast since there is no server-side rendering for each page request.
 
 
+----------
+
+
 ## Setup
 
 
@@ -18,6 +21,9 @@ Hugo enables teams to quickly build and iterate upon complex static websites.  T
  2.  Run `npm install` or `yarn` to get the dependencies for the included Gulp build system.
  3.  Build and optimize resources by running `gulp`
  4.  Run `hugo server` to build the site and visit [localhost:1313/hugo-starter/](http://localhost:1313/hugo-starter/) to view it.
+
+
+----------
 
 
 ## Structure
@@ -29,11 +35,16 @@ The Hugo [documentation](https://gohugo.io/overview/introduction/) gives a much 
 - The `/layouts` directory contains the html templates, the structural building blocks for the website.  
 	- The `/layouts/partials` directory contains reusable html components that we can inject into any template.  This is useful for headers, footers, navbars, sharing links, and other common components.  
 	- The `/layouts/pages` directory is where we store the templates for rendering the content in the `/content` directory.
+	- The `/layouts/shortcodes` directory is where can store shortcodes, or reusable html blocks that we can use in any of the content pages.  
+		- The core difference between partials and shortcodes is that partials are used in layouts(such as a footer), and shortcodes are used in content(such as a right-aligned image).
 - The `/archetypes`, `/data`, and `/themes` directories have some cool roles as well, but we don't need to use them in this sample project. Check out the [Hugo documentation](https://gohugo.io/overview/introduction/) for more info.
 - The core project configuration is stored within the `config.toml` file.  The data here is accessible from any template in the `/layouts` directory.  This is where we store top-level data like the site name and the menu configuration.
 - The website resources(css, javascript, images) are stored in the `/static` directory.
 - The prebuild resources(SCSS, Javascript ES6) are stored in the `/src` directory.
 - The `/public` directory is the final product, with the entire generated website.
+
+
+----------
 
 
 ## Build System
