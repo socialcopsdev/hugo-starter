@@ -34,55 +34,56 @@
     </ul>
 </nav>
 
-<h3>This is how the layout html file can access the page metadata</h3>
-<h1>Page title: Sample Product 1</h1> 
-
-<h1>Page Content</h1>
 <div class="container product-page">
+    <p>Here is a content page, but using html. This is how we could build custom product pages.<p>
+    <p>This content and metadata of this project page is stored within 'content/page/products.html'</p>
+    <p>The layout/frame for this page is stored within 'layouts/page/products.html'</p>
+    <p>We can use this same frame for all of the product pages</p>
+    <p>Imagine fancy html/css/javascript things here</p>
 
-<p>Here is a content page, but using html. This is how we could build custom product pages.<p>
-<p>This content and metadata of this project page is stored within 'content/page/products.html'</p>
-<p>The layout/frame for this page is stored within 'layouts/page/products.html'</p>
-<p>We can use this same frame for all of the product pages</p>
-<p>Imagine fancy html/css/javascript things here</p>
+    <section>
+        <h2 class="section-header">Our Product is the best</h2>
 
-<h2>Our Product is the best</h2>
-
-
-    
-
+        
 
 
-<div class="product-image-row">
 
-    <p class="product-image-text flex-text-right">This is a left-bound image, generated with the &#34;productimage shortcode&#34;</p>
+<div class="product-image-row product-image-row-left">
+
     <img class="product-image-left"  src="https://socialcopsdev.github.io/hugo-starter/images/collect.png" alt="Collect">
+    <p class="product-image-text product-image-text-right">This is a left-bound image, generated with the &#34;productimage shortcode&#34;</p>
 </div>
 
 
 
-    
+        
 
 
 
-<div class="product-image-row">
+<div class="product-image-row product-image-row-right">
 
-    <p class="product-image-text flex-text-left">This is a right-bound image, generated with the &#34;productimage shortcode&#34;</p>
-    <img class="product-image-right " src="https://socialcopsdev.github.io/hugo-starter/images/collect.png" alt="Collect">
+    <img class="product-image-right" src="https://socialcopsdev.github.io/hugo-starter/images/collect.png" alt="Collect">
+    <div class="product-image-text product-image-text-left">
+        <p class="product-image-text">This is a right-bound image, generated with the &#34;productimage shortcode&#34;</p>
+    </div>
 </div>
 
 
 
-    
+        
 
 
 
 <div>
 
     <img class="product-image-center" src="https://socialcopsdev.github.io/hugo-starter/images/collect.png" alt="Collect">
-    <p class="product-image-text ">This is a center-bound image, generated with the &#34;productimage shortcode&#34;</p>
+    <div>
+        <p class="product-image-text ">This is a center-bound image, generated with the &#34;productimage shortcode&#34;</p>
+    </div>
 </div>
 
+
+    </section>
 
 </div>
 
