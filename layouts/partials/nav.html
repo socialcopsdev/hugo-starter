@@ -1,4 +1,7 @@
 <nav>
+    <a href="{{ .Site.BaseURL }}">
+        <img src="/images/logo.png" alt="{{ .Site.Title }}">
+    </a>
     <p>Imagine that this is a beautiful navbar. The menu items are configured in config.toml</p>
     <ul>
         {{ range .Site.Menus.main }}
