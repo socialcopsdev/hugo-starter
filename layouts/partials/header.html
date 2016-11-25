@@ -8,14 +8,18 @@
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
-	<!-- Load CSS Async To Avoid Page Load Delay -->	
+	<!-- Load CSS Async To Avoid Page Load Delay 	
 	<link rel="preload" href="{{ .Site.BaseURL }}css/style.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css"></noscript>
+	-->
 
 	{{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
 	{{ .Hugo.Generator }}
 </head>
 <body>
+	<!-- CSS being linked in body in order to prevent blocking of pageload while CSS is downloading -->
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
+
 	<header>
 		<p>This is the header</p>
 		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
