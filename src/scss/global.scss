@@ -24,6 +24,7 @@ li {
     min-width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .product-image-row-left {
@@ -37,18 +38,17 @@ li {
 }
 
 .product-image-text {
-    width: 100%;
     text-align: center;
 }
 
 .flex-text-left {
+    width: 40vw;
     order: 1;
-    flex-basis: 80%;
 }
 
 .flex-text-right {
+    width: 40vw;
     order: 2;
-    flex-basis: 80%;
 }
 
 .product-image-center {
@@ -59,10 +59,8 @@ li {
 
 .product-image-left {
     order: 1;
-    flex-basis: 20%;
 }
 
 .product-image-right {
     order: 2;
-    flex-basis: 20%;
 }

@@ -11,12 +11,16 @@
 <div class="product-image-row product-image-row-right">
 <!-- Use this template for right image -->
     <img class="product-image-right" src="{{ .Get "src" }}" alt="{{ .Get "title" }}">
-    <p class="product-image-text flex-text-left">{{ .Get "content" }}</p>
+    <div class="product-image-text flex-text-left">
+        <p class="product-image-text">{{ .Get "content" }}</p>
+    </div>
 </div>
 {{ else }}
 <div>
 <!-- Use this template for center image -->
     <img class="product-image-center" src="{{ .Get "src" }}" alt="{{ .Get "title" }}">
-    <p class="product-image-text ">{{ .Get "content" }}</p>
+    <div>
+        <p class="product-image-text ">{{ .Get "content" }}</p>
+    </div>
 </div>
 {{ end }}
