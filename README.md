@@ -11,9 +11,6 @@ This is a small project to show the capabilities and structure of a website buil
 Hugo enables teams to quickly build and iterate upon complex static websites.  The resulting site is easy and cheap to host using an enterprise-grade service such as [AWS Cloudfront](https://aws.amazon.com/cloudfront/), and very fast since there is no server-side rendering for each page request.
 
 
-----------
-
-
 ## Setup
 
 
@@ -21,9 +18,6 @@ Hugo enables teams to quickly build and iterate upon complex static websites.  T
  2.  Run `npm install` or `yarn` to get the dependencies for the included Gulp build system.
  3.  Build and optimize resources by running `gulp`
  4.  Run `hugo server` to build the site and visit [localhost:1313/hugo-starter/](http://localhost:1313/hugo-starter/) to view it.
-
-
-----------
 
 
 ## Structure
@@ -40,9 +34,6 @@ The Hugo [documentation](https://gohugo.io/overview/introduction/) gives a much 
 - The website resources(css, javascript, images) are stored in the `/static` directory.
 - The prebuild resources(SCSS, Javascript ES6) are stored in the `/src` directory.
 - The `/public` directory is the final product, with the entire generated website.
-
-
-----------
 
 
 ## Build System
