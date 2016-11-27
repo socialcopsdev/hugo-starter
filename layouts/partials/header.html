@@ -8,13 +8,12 @@
 	
 	<link rel="manifest" href="/manifest.json">
 
+	<!-- Hide the content while the stylesheets load in async -->
 	<style>
-		/* Hide the content while the stylesheets load in async */
-		/* This is important for the Google PageSpeed rankings, as they'll
-			lower our score for mobile if the buttons are too close, or if content goes off-screen */
 		html { display: none; }
 	</style>
 
+	<!-- Load the stylesheets in async, to improve pagespeed ranking -->
 	<link rel="preload" href="{{ .Site.BaseURL }}css/libs.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="{{ .Site.BaseURL }}css/libs.css"></noscript>
 

@@ -37,14 +37,25 @@ gulp.task('css', function() {
 });
 
 // JS pipeline with babel and uglify
+// First build libraries, then custom files
 gulp.task('js', () => {
-    return gulp.src(srcDir + '/js/**/*.js')
+    return gulp.src([srcDir + '/js/vendor/*.js' , srcDir + '/js/*.js'])
         .pipe(babel({
             presets: ['es2015']
         }))
         .pipe(concat('scripts.js'))
         .pipe(uglify())
         .pipe(gulp.dest(destDir + '/js'));
+});
+
+// Build js files for individual page behaviors
+gulp.task('jspages', () => {
+    return gulp.src([srcDir + '/js/pages/*.js'])
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest(destDir + '/js/pages'));
 });
 
 // Optimize Images
@@ -64,15 +75,22 @@ gulp.task('sw', function(callback) {
     }, callback);
 });
 
+// Copy the App Manifest to the static dir
+gulp.task('manifest', () =>
+    gulp.src(srcDir + '/manifest.json')
+        .pipe(gulp.dest(destDir))
+);
+
 // Watch asset folder for changes
-gulp.task('watch', ['scss','images','js','css'], function () {
+gulp.task('watch', ['scss','css','images','js','jspages','manifest'], function () {
     gulp.watch(srcDir + '/scss/**/*.scss', ['scss']);
     gulp.watch(srcDir + '/images/**/*', ['images']);
-    gulp.watch(srcDir + '/js/**/*.js', ['js']);
+    gulp.watch(srcDir + '/js/**/*.js', ['js','jspages']);
     gulp.watch(srcDir + '/css/**/*.css', ['css']);
+    gulp.watch(srcDir + '/manifest.json', ['manifest']);
 });
 
 // Build assets
-gulp.task('build', ['scss','css','images','js']);
+gulp.task('build', ['scss','css','images','js', 'jspages','manifest']);
 
 gulp.task('default', ['build']);

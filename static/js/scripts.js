@@ -1,1 +1,0 @@
-"use strict";console.log("Javascript rocks!");var url=window.location.protocol+"//"+window.location.host+"/hugo-starter";"serviceWorker"in navigator&&navigator.serviceWorker.register(url+"/service-worker.js").then(function(o){console.log("ServiceWorker registration successful with scope: ",o.scope)}).catch(function(o){console.log("ServiceWorker registration failed: ",o)});

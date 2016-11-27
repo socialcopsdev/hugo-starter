@@ -1,9 +1,9 @@
 console.log('Javascript rocks!');
 
 /** Register Service Worker */
-const url = window.location.protocol + '//' + window.location.host + '/hugo-starter';
+//const url = window.location.protocol + '//' + window.location.host + '/hugo-starter';
 
-
+/*
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register(url + '/service-worker.js').then(function(registration) {
     // Registration was successful
@@ -13,3 +13,4 @@ if ('serviceWorker' in navigator) {
         console.log('ServiceWorker registration failed: ', err);
     });
 }
+*/

@@ -2,6 +2,16 @@
 		<p>Imagine a beautiful footer here</p>
 		<p>&copy; {{ .Now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
 	</footer>
+
 	<script type="text/javascript" src="{{.Site.BaseURL}}js/scripts.js"></script>
+
+	{{ if isset .Params "script" }}
+	<script type="text/javascript" src="{{.Site.BaseURL}}js/{{.Params.script}}"></script>
+	{{ end }}
+
+	{{ if $.Scratch.Get "script" }}
+	<script type="text/javascript" src="{{.Site.BaseURL}}js/{{ $.Scratch.Get "script" }}"></script>
+	{{ end }}
+
 </body>
 </html>
