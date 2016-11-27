@@ -8,6 +8,8 @@ const uglify        = require('gulp-uglify');
 const cleanCSS      = require('gulp-clean-css');
 const path =        require('path');
 const swPrecache =  require('sw-precache');
+const sourcemaps = require('gulp-sourcemaps');
+const plumber = require('gulp-plumber');
 
 const srcDir = 'src/';
 const destDir = 'static/';
@@ -17,23 +19,38 @@ const swCachedFiletypesRegex = '**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff}'
 // SCSS pipeline with autoprefixer and cleancss
 gulp.task('scss', function() {
     gulp.src(srcDir + 'scss/**/*.scss')
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(sass())
+        // Need to re-init sourcemaps or else there are bugs
+        .pipe(sourcemaps.write({includeContent: false}))
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(autoprefixer({
             browsers : ['last 20 versions']
         }))
+        // need to re-init again
+        .pipe(sourcemaps.write({includeContent: false}))
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(cleanCSS({compatibility: 'ie8'}))
+        // uggh why
+        .pipe(sourcemaps.write({includeContent: false}))
+        .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(concat('style.css'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(destDir + 'css'));
 });
 
 // CSS pipeline with autoprefixer and cleancss
 gulp.task('css', function() {
     gulp.src(srcDir + 'css/**/*.css')
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(autoprefixer({
             browsers : ['last 20 versions']
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(concat('libs.css'))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(destDir + 'css'));
 });
 
@@ -41,27 +58,34 @@ gulp.task('css', function() {
 // First build libraries, then custom files
 gulp.task('js', () => {
     return gulp.src([srcDir + 'js/vendor/*.js' , srcDir + 'js/*.js'])
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['es2015']
         }))
         .pipe(concat('scripts.js'))
         .pipe(uglify())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(destDir + 'js'));
 });
 
 // Build js files for individual page behavior
 gulp.task('jspages', () => {
     return gulp.src([srcDir + 'js/page/*.js'])
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['es2015']
         }))
         .pipe(uglify())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(destDir + 'js/page'));
 });
 
 // Optimize Images
 gulp.task('images', () =>
     gulp.src(srcDir + 'images/**/*')
+        .pipe(plumber())
         .pipe(imagemin())
         .pipe(gulp.dest(destDir + 'images'))
 );
@@ -79,6 +103,7 @@ gulp.task('sw', function(callback) {
 // Copy the App Manifest to the static dir
 gulp.task('manifest', () =>
     gulp.src(srcDir + 'manifest.json')
+        .pipe(plumber())
         .pipe(gulp.dest(destDir))
 );
 
