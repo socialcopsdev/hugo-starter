@@ -12,11 +12,11 @@
 	{{ $scratchScript := $.Scratch.Get "script"}}
 
 	{{ if $pageScript }}
-	<script type="text/javascript" src="{{.Site.BaseURL}}js/{{ $pageScript }}"></script>
+	<script type="text/javascript" src="{{.Site.BaseURL}}js/page/{{ $pageScript }}"></script>
 	{{ end }}
 
 	{{ if $scratchScript }}
-	<script type="text/javascript" src="{{.Site.BaseURL}}js/{{ $scratchScript }}"></script>
+	<script type="text/javascript" src="{{.Site.BaseURL}}js/page/{{ $scratchScript }}"></script>
 	{{ end }}
 
 </body>

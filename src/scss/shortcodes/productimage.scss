@@ -1,0 +1,79 @@
+@import '../variables.scss';
+
+/**
+    Product Image Row Styling
+**/
+
+.product-image-row {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+
+    @media only screen and (max-width: $mobile-screen) {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.product-image-row-left {
+    @extend .product-image-row ;
+    justify-content: flex-end;
+    float: right; 
+}
+
+.product-image-row-right {
+    @extend .product-image-row ;
+    justify-content: center;
+    float: left; 
+}
+
+.product-image-text {
+    text-align: center;
+
+    @media only screen and (max-width: $mobile-screen) {
+        width: 100%;
+    }
+}
+
+.product-image-text-left {
+    @extend .product-image-text;
+    width: 40vw;
+    order: 1;
+}
+
+.product-image-text-right {
+    @extend .product-image-text;
+    width: 40vw;
+    order: 2;
+}
+
+.product-image-center {
+    width: 100%;
+}
+
+.product-image-center {
+    @extend .product-image-text;
+    float: center;
+    margin: auto;
+    width: 100%;
+}
+
+.product-image-left {
+    order: 1;
+
+    @media only screen and (max-width: $mobile-screen) {
+        width: 100%;
+    }
+}
+
+.product-image-right {
+    order: 2;
+
+    @media only screen and (max-width: $mobile-screen) {
+        width: 100%;
+        order: 0;
+    }
+}

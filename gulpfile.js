@@ -56,7 +56,7 @@ gulp.task('jspages', () => {
             presets: ['es2015']
         }))
         .pipe(uglify())
-        .pipe(gulp.dest(destDir + 'js/pages'));
+        .pipe(gulp.dest(destDir + 'js/page'));
 });
 
 // Optimize Images
