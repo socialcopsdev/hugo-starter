@@ -4,6 +4,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True" />
+	
+	<link rel="manifest" href="/manifest.json">
+
+	<link rel="preload" href="{{ .Site.BaseURL }}css/libs.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ .Site.BaseURL }}css/libs.css"></noscript>
+
+	<link rel="preload" href="{{ .Site.BaseURL }}css/style.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css"></noscript>
+
+	<style>
+		/* Essential layout syles go here, while the stylesheets load in async */
+		/* These are most important for the Google PageSpeed rankings, as they'll
+			lower our score for mobile if the buttons are too close, or if content goes off-screen */
+		li { padding: 10px; }
+		img { max-width: 100%; }
+	</style>
+
 	<title>{{ .Title }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
@@ -12,14 +30,6 @@
 	{{ .Hugo.Generator }}
 </head>
 <body>
-	<!-- 
-	CSS linked in body instead of header in order to prevent blocking of pageload while CSS is downloading. 
-	It is a hack to improve pageload times and google search rankings. 
-	-->
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/vendor/normalize.css">
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/vendor/skeleton.css">
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-
 	<header>
 		<p>This is the header</p>
 	</header>

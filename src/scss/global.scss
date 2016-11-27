@@ -26,7 +26,7 @@ li {
 
 
 /**
-Product Image Row Styling
+    Product Image Row Styling
 **/
 
 .product-image-row {
@@ -34,6 +34,7 @@ Product Image Row Styling
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow: hidden;
 }
 
 .product-image-row-left {
