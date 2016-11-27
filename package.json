@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp watch & hugo server",
-    "deploy": "gulp && hugo && bash deploy.sh"
+    "deploy": "gulp && hugo && gulp sw && bash deploy.sh"
   },
   "keywords": [],
   "author": "",

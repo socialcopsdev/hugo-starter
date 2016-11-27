@@ -3,14 +3,20 @@
 		<p>&copy; {{ .Now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
 	</footer>
 
+	<!-- First Load the global script and libraries file -->
 	<script type="text/javascript" src="{{.Site.BaseURL}}js/scripts.js"></script>
 
-	{{ if isset .Params "script" }}
-	<script type="text/javascript" src="{{.Site.BaseURL}}js/{{.Params.script}}"></script>
+
+	<!-- Then load any scripts that have been dynamically specified through Hugo variables -->
+	{{ $pageScript := .Params.script }}
+	{{ $scratchScript := $.Scratch.Get "script"}}
+
+	{{ if $pageScript }}
+	<script type="text/javascript" src="{{.Site.BaseURL}}js/{{ $pageScript }}"></script>
 	{{ end }}
 
-	{{ if $.Scratch.Get "script" }}
-	<script type="text/javascript" src="{{.Site.BaseURL}}js/{{ $.Scratch.Get "script" }}"></script>
+	{{ if $scratchScript }}
+	<script type="text/javascript" src="{{.Site.BaseURL}}js/{{ $scratchScript }}"></script>
 	{{ end }}
 
 </body>

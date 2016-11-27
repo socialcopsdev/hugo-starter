@@ -49,9 +49,9 @@ gulp.task('js', () => {
         .pipe(gulp.dest(destDir + 'js'));
 });
 
-// Build js files for individual page behaviors
+// Build js files for individual page behavior
 gulp.task('jspages', () => {
-    return gulp.src([srcDir + 'js/pages/*.js'])
+    return gulp.src([srcDir + 'js/page/*.js'])
         .pipe(babel({
             presets: ['es2015']
         }))

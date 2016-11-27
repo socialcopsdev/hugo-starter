@@ -9,11 +9,9 @@
 	<link rel="manifest" href="/manifest.json">
 
 	<!-- Hide the content while the stylesheets load in async -->
-	<style>
-		html { display: none; }
-	</style>
+	<style> html { display: none; } </style>
 
-	<!-- Load the stylesheets in async, to improve pagespeed ranking -->
+	<!-- Load the stylesheets in async to improve pagespeed ranking -->
 	<link rel="preload" href="{{ .Site.BaseURL }}css/libs.css" as="style" onload="this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="{{ .Site.BaseURL }}css/libs.css"></noscript>
 

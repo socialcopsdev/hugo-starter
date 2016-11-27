@@ -11,9 +11,6 @@ This is a small project to show the capabilities and structure of a website buil
 Hugo enables teams to quickly build and iterate upon complex static websites.  The resulting site is easy and cheap to host using an enterprise-grade service such as [AWS Cloudfront](https://aws.amazon.com/cloudfront/), and very fast since there is no server-side rendering for each page request.
 
 
-----------
-
-
 ## Setup
 
 
@@ -21,9 +18,6 @@ Hugo enables teams to quickly build and iterate upon complex static websites.  T
  2.  Run `npm install` or `yarn` to get the dependencies for the included Gulp build system.
  3.  Build and optimize resources by running `gulp`
  4.  Run `hugo server` to build the site and visit [localhost:1313/hugo-starter/](http://localhost:1313/hugo-starter/) to view it.
-
-
-----------
 
 
 ## Structure
@@ -39,12 +33,9 @@ The Hugo [documentation](https://gohugo.io/overview/introduction/) gives a much 
 		- The core difference between partials and shortcodes is that partials are used in layouts(such as a footer), and shortcodes are used in content(such as a right-aligned image).
 - The `/archetypes`, `/data`, and `/themes` directories have some cool roles as well, but we don't need to use them in this sample project. Check out the [Hugo documentation](https://gohugo.io/overview/introduction/) for more info.
 - The core project configuration is stored within the `config.toml` file.  The data here is accessible from any template in the `/layouts` directory.  This is where we store top-level data like the site name and the menu configuration.
-- The website resources(css, javascript, images) are stored in the `/static` directory.
 - The prebuild resources(SCSS, Javascript ES6) are stored in the `/src` directory.
+- The built resources(css, javascript, images) are stored in the `/static` directory.
 - The `/public` directory is the final product, with the entire generated website.
-
-
-----------
 
 
 ## Build System
@@ -57,4 +48,54 @@ This starter project has a basic [Gulp](http://gulpjs.com/) build system configu
  - The `hugo server` command serves the site to [ localhost:1313/hugo-starter](http://localhost:1313/hugo-starter/),  automatically watches the project files, and runs a live reload script on the web page whenever a change is made.
  - By running `gulp watch` and `hugo server` at the same time, you can automatically sync resource changes from `/src` directly to the webpage.  As a shortcut for running both watchers at once, use `npm start`.
 
-You can also place prebuilt resources, such as libraries and fonts, directly in the `/static` directory. These will be overwritten by Gulp if they have the path `js/scripts.js` or `css/style.css`. 
+You can also place prebuilt resources, such as libraries and fonts, directly in the `/static` directory. These will be overwritten
+
+ by Gulp if they have the path `js/scripts.js` or `css/style.css`. 
+
+## How To
+
+### Add a Page
+
+Create a new file called `{pagename}.html` in the  `/content/{section}/ `directory.
+
+At the top of the file, add some metadata, called [Front Matter](https://gohugo.io/content/front-matter/).
+
+Here's an example -
+
+    +++
+    title = "Sample Product 1"
+    draft = false
+    type = "page"
+    script = "product.js"
+    +++
+
+ - Title - The page title.  This is what will appear in the browser tab.
+ - Draft - This will be more useful once the website is in production.  For now just set it to false.
+ - Type - The HTML template on which to show the page.  This is where we add the header, footer, etc.  Use "page" for all stand-alone pages.
+ - Script - (optional) The javascript file to send with the page, for page specific behavior.  Should correspond to a file in `/src/js/page/`. 
+
+The rest of the file should contain the html for the page content, i.e. whatever is between the header and the footer.  Don't import any external javascript or css files here, it will hurt the SEO and page load.
+
+### Javascript
+
+#### Add javascript to a page
+
+Add a new file in `/src/js/page/` called `{pagetitle}.js`  Add the custom javascript here.  The the page content file, add `script ="{pagetitle}.js"` to the Front Matter metadata.  The script should now download and run whenever the page is visited.
+
+#### Add a javascript library
+
+Add the library JS file to `/src/js/vendor`.  During the Gulp build process it will be minified and combined with all other libraries in the directory, and imported before the page-specific scripts on each page.
+
+#### Add global javascript
+
+For any javascript that should be run on every page, add it to `/src/js/scripts.js`.
+
+### CSS
+
+#### Add a SCSS rule
+
+Add the rule to the appropriate file in the `/src/scss` directory.
+
+#### Add a CSS library
+
+Add the library CSS file to the `/src/css` directory.
